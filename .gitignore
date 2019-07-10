@@ -1,0 +1,5 @@
+*.html
+*.plan
+*.tfstate
+*.tfstate.backup
+.terraform
