@@ -2,7 +2,7 @@ package authz.terraform
 # ^ This really could be anything, it's just your package definition.
 
 default allow = false
-# This allows us to access the resource changes array directly.
+# 👇This allows us to access the resource changes array directly.
 import input.resource_changes
 
 # Limit configs
@@ -14,6 +14,7 @@ blast_radius = 5
 allow {
     valid_version
     check_deletes
+    no_instance
 }
 
 ## General Rules
@@ -30,13 +31,6 @@ check_deletes {
 
     deletes < blast_radius
 }
-
-## AWS Specific rules
-
-
-## Azure Specific rules
-
-## GCP Specific rules
 
 
 

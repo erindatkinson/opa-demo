@@ -18,6 +18,15 @@ locals {
     ]
 }
 
+variable "instance_type" {
+  default = "t3.medium"
+}
+
+
+provider "aws" {
+  region = "us-east-2"
+}
+
 module "asg" {
   source  = "terraform-aws-modules/autoscaling/aws"
   version = "~> 3.0"
